@@ -15,17 +15,14 @@ body {
 
 /* Estilo para cabeçalho com imagem de fundo */
 header {
-    background-image: url(assets/COMFUNDO/IMAGENS/05ESTAMPA/ESTAMPA\ \(1\).png);
-    background-size: cover; /* Cobre toda a área do cabeçalho */
-    background-position: center; /* Centraliza a imagem */
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.fit-picture {
-    width: 250px;
-  }
 
 /* Estilo para o cabeçalho */
 header {
