@@ -173,13 +173,20 @@ footer {
     margin-top: 40px;
 }
 
+/* Estilo do texto no rodapé */
+footer p {
+    color: #F5E9E9; /* Cor do texto do rodapé */
+    font-size: 14px;
+}
+
+/* Títulos */
+h2 {
+    color: #E0AAB8; /* Cor padrão dos títulos <h2> */
+}
+
 /* Cor específica para o título "Feedbacks" */
 h2#feedbacks {
     color: #A38064; /* Cor personalizada para Feedbacks */
-}
-
-footer p {
-    font-size: 1em;
 }
 
 /* Responsividade para telas menores */
