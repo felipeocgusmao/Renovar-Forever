@@ -23,6 +23,10 @@ header {
     text-align: center;
 }
 
+.fit-picture {
+    width: 250px;
+  }
+
 /* Estilo para o cabeçalho */
 header {
     background-color: #E3C5BB; /* Fundo leve de rosa */
