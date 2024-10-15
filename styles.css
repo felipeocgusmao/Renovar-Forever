@@ -64,11 +64,12 @@ nav ul li a:hover {
 
 #about {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.about-content {
-    flex-basis: 60%; /* ajuste o valor para definir a largura do conteúdo */
+.about-text {
+    flex-basis: 60%; /* ajuste o valor para definir a largura do texto */
     padding: 20px;
 }
 
