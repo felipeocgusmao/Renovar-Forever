@@ -62,6 +62,27 @@ nav ul li a:hover {
     color: #fff; /* Texto branco ao passar o mouse */
 }
 
+#about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-content {
+    flex-basis: 60%; /* ajuste o valor para definir a largura do conteúdo */
+    padding: 20px;
+}
+
+.about-image {
+    flex-basis: 40%; /* ajuste o valor para definir a largura da imagem */
+    padding: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Seções do site */
 section {
     padding: 60px 20px;
