@@ -7,76 +7,95 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Renovar Forever</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Quem Somos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#feedback">Feedbacks</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<header>
-    <img src="assets/SEMFUNDO/renovar-forever.png" alt="Renovar Forever" style="width: 500px; height: 200px; object-fit: contain;">
-    <nav>
-        <ul>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#feedbacks">Feedbacks</a></li>
-            <li><a href="#contact">Contato</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Seção Principal (Hero) -->
+    <section id="hero">
+        <div class="hero-text">
+            <h2>Momentos Inesquecíveis para Festas Infantis</h2>
+            <p>Criando personalizações únicas e exclusivas que tornam cada evento memorável!</p>
+            <button onclick="scrollToSection('servicos')">Nossos Serviços</button>
+        </div>
+    </section>
 
-<section id="about">
-    <div class="about-text">
-        <h2>Quem sou eu?</h2>
-        <p>Olá! Eu sou Karolaine Gusmão, fundadora da Renovar Forever, especializada em papelaria premium para festas infantis.</p>
-        <p>O meu propósito é transformar sonhos em realidade através de criações únicas, que trazem elegância e criatividade para momentos especiais. Com uma paixão por detalhes e dedicação em cada projeto, ajudo mamães e papais a criarem festas inesquecíveis para seus filhos, entregando produtos feitos com carinho e qualidade. Se você busca exclusividade e personalização, está no lugar certo!</p>
-    </div>
-    <div class="about-image">
-        <img src="assets/img01.png" alt="Imagem de fundo">
-    </div>
-</section>
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <div class="container">
+            <h2>Quem Somos?</h2>
+            <p>Olá! Eu sou Karolaine Gusmão, fundadora da <strong>Renovar Forever</strong>, especializada em papelaria premium para festas infantis. Nossa missão é transformar momentos especiais em lembranças inesquecíveis, criando personalizações que refletem a essência de cada celebração.</p>
+        </div>
+    </section>
 
-<section id="services">
-    <h2>O que oferecemos?</h2>
-    <ul>
-        <li>Personalizados Premium, podendo ser feito em vários formatos e em qualquer tema.</li>
-        <li>Lembrancinhas Fim de Festa, além dos personalizados, temos um catálogo com muitas opções de lembrancinhas, para que você possa ter a mesma identidade visual em todos os itens de papelaria da festa.</li>
-        <li>Convites, tags, e produtos para fazer lojinha. Tudo o que você precisa para ter uma festa completa.</li>
-    </ul>
-</section>
+    <!-- Seção de Serviços -->
+    <section id="servicos">
+        <div class="container">
+            <h2>O que Oferecemos?</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Personalizados Premium</h3>
+                    <p>Criamos personalizados exclusivos para festas infantis, feitos sob medida para qualquer tema e formato.</p>
+                </div>
+                <div class="card">
+                    <h3>Lembrancinhas</h3>
+                    <p>Oferecemos um catálogo completo de lembrancinhas que garantem a mesma identidade visual da sua festa.</p>
+                </div>
+                <div class="card">
+                    <h3>Convites e Tags</h3>
+                    <p>Convites, tags e produtos para lojinha, ajudando você a preparar todos os detalhes para uma festa incrível.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="feedbacks" style="background-image: url(assets/COMFUNDO/IMAGENS/05ESTAMPA/ESTAMPA\ \(1\).png); background-size: cover; padding: 30px 10px;">
-    <h2 id="feedback-title">Feedbacks</h2>
-    <div class="feedback">
-        <img src="feedback1.jpg" alt="Cliente 1">
-        <p>"Os personalizados ficaram incríveis! Todos os convidados elogiaram!"<strong>- Ana Paula</strong></p>
-    </div>
-    <div class="feedback">
-        <img src="feedback2.jpg" alt="Cliente 2">
-        <p>"A festa do meu filho foi um sucesso graças a vocês!"<strong>- Lucas Silva</strong></p>
-    </div>
-    <div class="feedback">
-        <img src="feedback3.jpg" alt="Cliente 3">
-        <p>"Adorei o atendimento e a qualidade dos produtos!"<strong>- Mariana Costa</strong></p>
-    </div>
-</section>
+    <!-- Seção de Feedbacks -->
+    <section id="feedback">
+        <div class="container">
+            <h2>Feedbacks</h2>
+            <div class="feedback-list">
+                <p><strong>Feedback 1:</strong> "A experiência foi incrível! Os produtos são de alta qualidade e muito bonitos!" - <em>Cliente 1</em></p>
+                <p><strong>Feedback 2:</strong> "Super recomendo! Tudo feito com muito carinho e atenção aos detalhes." - <em>Cliente 2</em></p>
+                <p><strong>Feedback 3:</strong> "Produtos incríveis, personalizados e entrega rápida. Com certeza voltarei a comprar!" - <em>Cliente 3</em></p>
+            </div>
+        </div>
+    </section>
 
-<section id="mission">
-    <h2>A missão da Renovar Forever</h2>
-    <p>A minha missão é transformar momentos especiais em lembranças inesquecíveis, criando personalizados que refletem a essência de cada celebração. Com foco na criatividade, exclusividade e atenção aos detalhes, busco proporcionar experiências únicas para os clientes, garantindo que cada festa seja marcada por elegância e encantamento.</p>
-</section>
+    <!-- Seção de Contato -->
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Envie-nos uma mensagem para discutirmos os detalhes da sua festa!</p>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Nome" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="status"></p>
+        </div>
+    </section>
 
-<section id="contact">
-    <h2>Contato</h2>
-    <p>Você pode entrar em contato conosco através dos seguintes links:</p>
-    <div>
-        <a href="https://wa.me/message/OVCOGVWSMI2FG" target="_blank"><button>Whatsapp</button></a>
-    </div>
-    <div>
-        <a href="https://www.canva.com/design/DAF1pEpJ270/tdDGr3FiDmaH7Nqv-h6BYg/edit?utm_content=DAF1pEpJ270&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"><button>Personalizado Premium</button></a>
-    </div>
-    <div>
-        <a href="https://www.canva.com/design/DAGTePN5iKk/wckfnVRgDlZXMmzgVo9-QQ/edit?utm_content=DAGTePN5iKk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"><button>Lembrancinhas</button></a>
-    </div>
-</section>
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Renovar Forever. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-<footer>
-    <p>© 2024 Renovar Forever. Todos os direitos reservados.</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

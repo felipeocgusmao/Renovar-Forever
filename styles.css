@@ -1,225 +1,146 @@
-/* Reset básico para limpar estilos padrão */
+/* Reseta o estilo padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Definindo fonte e cores minimalistas */
 body {
-    font-family: 'Arial', sans-serif;
-    color: #A38064;  /* Texto em marrom suave */
-    background-color: #F5E9E9; /* Fundo suave de rosa claro */
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Estilo para cabeçalho com imagem de fundo */
 header {
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Estilo para o cabeçalho */
-header {
-    background-color: #E3C5BB; /* Fundo leve de rosa */
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #A38064;
+    padding: 20px 0;
     text-align: center;
 }
 
-header h1 {
-    font-size: 2.5em;
-    color: #A38064;  /* Título em marrom suave */
-    font-weight: bold;
+header .logo h1 {
+    color: #F5E9E9;
+    font-size: 30px;
+    margin: 0;
 }
 
 nav ul {
-    list-style-type: none;
-    margin-top: 10px;
+    list-style: none;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 nav ul li a {
+    color: #F5E9E9;
     text-decoration: none;
-    color: #A38064;  /* Links em rosa mais escuro */
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    font-size: 18px;
 }
 
 nav ul li a:hover {
-    background-color: #E0AAB8; /* Fundo ao passar o mouse */
-    color: #fff; /* Texto branco ao passar o mouse */
+    color: #E3C5BB;
 }
 
-#about {
+#hero {
+    background: url('assets/COMFUNDO/IMAGENS/05ESTAMPA/ESTAMPA (1).png') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-.about-text {
-    flex-basis: 60%; /* ajuste o valor para definir a largura do texto */
-    padding: 20px;
+#hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.about-image {
-    flex-basis: 40%; /* ajuste o valor para definir a largura da imagem */
-    padding: 20px;
+#hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
 }
 
-.about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#hero button {
+    background-color: #A38064;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-/* Seções do site */
+#hero button:hover {
+    background-color: #E3C5BB;
+}
+
 section {
     padding: 60px 20px;
-    max-width: 1000px;
+}
+
+.container {
+    width: 80%;
     margin: 0 auto;
 }
 
-h2 {
-    font-size: 2em;
+#sobre h2, #servicos h2, #contato h2 {
+    font-size: 36px;
     margin-bottom: 20px;
-    color: #E0AAB8;  /* Cor padrão para outras tags h2 */
+    color: #A38064;
 }
 
-/* Cor específica para o h2 Feedbacks */
-h2#feedback-title {
-    color: #A38064;  /* Cor marrom suave apenas para o título de feedbacks */
+#servicos .service-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-/* Parágrafos e espaçamento */
-p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #A38064;  /* Parágrafos em marrom suave */
-}
-
-/* Estilo para a seção de feedbacks com imagem de fundo */
-#feedbacks {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    background-image: url(assets/COMFUNDO/IMAGENS/05ESTAMPA/ESTAMPA\ \(1\).png); /* Adicionando a mesma estampa */
-    background-size: cover; /* Cobre toda a área da seção */
-    background-position: center; /* Centraliza a imagem */
-    border: 1px solid #E0AAB8; /* Borda rosa mais escura */
-    border-radius: 5px; /* Bordas arredondadas */
-}
-
-.feedback {
-    margin-bottom: 20px; /* Espaço entre os feedbacks */
-    padding: 15px;
-    background-color: #fff; /* Fundo branco para os feedbacks */
-    border-left: 5px solid #A38064; /* Borda lateral para destaque */
-    border-radius: 5px; /* Bordas arredondadas */
-    display: flex; /* Flex para alinhar imagem e texto */
-    align-items: center; /* Centraliza verticalmente */
-}
-
-.feedback img {
-    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: 50px; /* Ajuste o tamanho da imagem conforme necessário */
-    border-radius: 50%; /* Imagens redondas */
-    margin-right: 15px; /* Espaço entre a imagem e o texto */
-}
-
-.feedback p {
-    margin: 0; /* Remove margens padrão */
-}
-
-.feedback p strong {
-    display: block; /* Faz o nome do autor ficar em uma nova linha */
-    margin-top: 5px; /* Espaço acima do nome */
-    color: #E0AAB8; /* Cor do nome em rosa mais escuro */
-}
-
-/* Estilo para botões */
-button {
-    padding: 12px 24px;
-    background-color: #E0AAB8; /* Cor de fundo dos botões */
-    color: #A38064; /* Cor do texto dos botões */
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transição suave para cor de fundo e texto */
-}
-
-button:hover {
-    background-color: #E3C5BB; /* Cor ao passar o mouse */
-    color: #A38064; /* Mantém a cor do texto */
-}
-
-/* Estilo específico para os botões da seção de Contato */
-#contact a {
-    display: inline-block;
-    margin-bottom: 15px; /* Espaçamento entre os botões */
-}
-
-#contact button {
-    padding: 12px 24px;
-    background-color: #E0AAB8; /* Cor de fundo dos botões */
-    color: #A38064; /* Cor do texto dos botões */
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transição suave para cor de fundo e texto */
-}
-
-#contact button:hover {
-    background-color: #E3C5BB; /* Cor ao passar o mouse */
-    color: #A38064; /* Mantém a cor do texto */
-}
-
-/* Estilo para o rodapé  */
-footer {
-    background-color: #A38064; /* Fundo em marrom suave */
-    color: #fff;
-    text-align: center;
+#servicos .card {
+    background-color: white;
+    border-radius: 8px;
     padding: 20px;
-    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-basis: 30%;
 }
 
-/* Estilo do texto no rodapé */
-footer p {
-    color: #F5E9E9; /* Cor do texto do rodapé */
-    font-size: 14px;
+#feedback .feedback-list p {
+    background-color: #E3C5BB;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-/* Títulos */
-h2 {
-    color: #E0AAB8; /* Cor padrão dos títulos <h2> */
+#contato form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
-/* Cor específica para o título "Feedbacks" */
-h2#feedbacks {
-    color: #A38064; /* Cor personalizada para Feedbacks */
+#contato input, #contato textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
+#contato button {
+    background-color: #A38064;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+}
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+#contato button:hover {
+    background-color: #E3C5BB;
+}
+
+footer {
+    background-color: #A38064;
+    color: #F5E9E9;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
 }
