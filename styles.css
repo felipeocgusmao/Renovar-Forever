@@ -1,3 +1,19 @@
+/* Media Query para telas menores (celulares) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    #servicos .service-cards {
+        flex-direction: column;
+    }
+
+    #servicos .card {
+        flex-basis: auto;
+        margin-bottom: 20px;
+    }
+}
+
 /* Reseta o estilo padrão */
 * {
     margin: 0;
@@ -71,10 +87,11 @@ nav ul li a:hover {
     padding: 15px 30px;
     font-size: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
 }
 
 #hero button:hover {
-    background-color: #E3C5BB;
+    background-color: #8a634a; /* Cor mais escura no hover */
 }
 
 section {
@@ -108,9 +125,19 @@ section {
 
 #feedback .feedback-list p {
     background-color: #E3C5BB;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    position: relative; /* Para posicionar as aspas */
+}
+
+#feedback .feedback-list p::before { /* Adiciona aspas */
+    content: open-quote;
+    font-size: 30px;
+    color: #A38064;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 #contato form {
