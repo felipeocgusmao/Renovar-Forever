@@ -28,19 +28,6 @@ body {
     color: #333;
 }
 
-.texto {
-    font-size: 24px;
-    font-weight: normal;
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    }
-
-.sub-texto {
-    width: 400px;
-    margin-inline: auto;
-}
-
 header {
     background-color: #f5e9e9;
     padding: 20px 0;
