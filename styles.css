@@ -30,7 +30,7 @@ body {
 
 .texto {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: normal;
     align-items: center;
     display: flex;
     justify-content: space-around;
