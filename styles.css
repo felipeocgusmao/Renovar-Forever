@@ -112,7 +112,7 @@ section {
     margin: 0 auto;
 }
 
-#sobre h2, #servicos h2, #contato h2 {
+#about h2, #servicos h2, #contato h2 {
     font-size: 36px;
     margin-bottom: 20px;
     color: #A38064;
