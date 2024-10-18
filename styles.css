@@ -40,6 +40,7 @@ header .logo h1 {
     margin: 0;
 }
 
+/* Divisão de texto e imagem */
 #about .container {
     display: flex;
     flex-direction: column;
