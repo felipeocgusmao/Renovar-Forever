@@ -40,13 +40,13 @@ header .logo h1 {
     margin: 0;
 }
 
-#sobre .container {
+#about .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#sobre .row {
+#about .row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,17 +54,17 @@ header .logo h1 {
     width: 100%;
 }
 
-#sobre .col-left {
+#about .col-left {
     width: 70%;
     padding: 20px;
 }
 
-#sobre .col-right {
+#about .col-right {
     width: 30%;
     padding: 20px;
 }
 
-#sobre img {
+#about img {
     border-radius: 10px;
 }
 
