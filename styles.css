@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #A38064;
+    background-color: #E3C5BB;
     padding: 20px 0;
     text-align: center;
 }
@@ -34,19 +34,20 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #F5E9E9;
+    color: #A38064;
     text-decoration: none;
     font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #E3C5BB;
+    color: #f4f4f4;
 }
 
 #hero {
-    background: url('assets/COMFUNDO/IMAGENS/05ESTAMPA/ESTAMPA (1).png') no-repeat center center/cover;
+    background-color: #E0AAB8;
+    height: 50px;
     color: white;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
