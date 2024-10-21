@@ -138,10 +138,9 @@ section {
     padding: 60px 20px;
     max-width: 1000px;
     margin: 0 auto;
-    background-image: url(assets/COMFUNDO/IMAGENS/05ESTAMPA/ESTAMPA\ \(1\).png); /* Adicionando a mesma estampa */
     background-size: cover; /* Cobre toda a área da seção */
     background-position: center; /* Centraliza a imagem */
-    border: 1px solid #E0AAB8; /* Borda rosa mais escura */
+    border: 1px solid #e3c5bb; /* Borda rosa mais escura */
     border-radius: 5px; /* Bordas arredondadas */
 }
 
