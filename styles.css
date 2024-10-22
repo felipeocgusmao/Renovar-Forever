@@ -113,7 +113,7 @@ section {
     margin: 0 auto;
 }
 
-#about h2, #servicos h2, #contato h2 {
+#about h2, #servicos h2, #feedback h2, #mission h2, #contact h2 {
     font-size: 36px;
     margin-bottom: 20px;
     color: #A38064;
@@ -155,7 +155,7 @@ section {
 #feedback .feedback-list p::before { /* Adiciona aspas */
     content: open-quote;
     font-size: 30px;
-    color: #A38064;
+    color: #a38064;
     position: absolute;
     top: 10px;
     left: 10px;
