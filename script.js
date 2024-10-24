@@ -32,19 +32,17 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-// Função para estilo carrossel
-let currentIndex = 0;
+// NAvegação com setas
+function scrollLeft() {
+    document.querySelector('.feedback-carousel').scrollBy({
+        left: -300, // Ajuste a largura do scroll conforme necessário
+        behavior: 'smooth'
+    });
+}
 
-function moveSlide(direction) {
-    const images = document.querySelectorAll('.feedback-images img');
-    currentIndex += direction;
-
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1; // Volta para a última imagem
-    } else if (currentIndex >= images.length) {
-        currentIndex = 0; // Volta para a primeira imagem
-    }
-
-    const offset = -currentIndex * (images[0].clientWidth + 20); // 20 é a margem entre as imagens
-    document.querySelector('.feedback-images').style.transform = `translateX(${offset}px)`;
+function scrollRight() {
+    document.querySelector('.feedback-carousel').scrollBy({
+        left: 300, // Ajuste a largura do scroll conforme necessário
+        behavior: 'smooth'
+    });
 }

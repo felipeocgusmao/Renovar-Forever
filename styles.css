@@ -187,59 +187,31 @@ section {
     color: #333;
 }
 
-/* Estilo para a seção de feedbacks */
-#feedback {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    background-size: cover; /* Cobre toda a área da seção */
-    background-position: center; /* Centraliza a imagem */
-    border: 1px solid #e3c5bb; /* Borda rosa mais escura */
-    border-radius: 5px; /* Bordas arredondadas */
+.feedback-carousel-wrapper {
+    position: relative;
 }
 
-#feedback .feedback-list p {
-    background-color: #E3C5BB;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    position: relative; /* Para posicionar as aspas */
-}
-
-#feedback .feedback-list p::before { /* Adiciona aspas */
-    content: open-quote;
-    font-size: 30px;
-    color: #a38064;
+.carousel-btn {
     position: absolute;
-    top: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.carousel-btn.left {
     left: 10px;
 }
 
-/* Estilo Feedback Carousel */
-
-.feedback-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px; /* Espaçamento entre os itens */
+.carousel-btn.right {
+    right: 10px;
 }
-
-.feedback-item {
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feedback-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.feedback-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-
 
 /* Estilo para Contato e Catalogo */
 
