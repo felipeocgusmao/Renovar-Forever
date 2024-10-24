@@ -1,7 +1,7 @@
 /* Media query para dispositivos móveis */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .main-container {
-        border-right: none;
+        border-right: 1px solid #A38064; /* Garanta que a borda esteja presente mesmo em telas menores */
     }
 }
 
@@ -26,10 +26,12 @@ body {
     max-width: 1920px;
     margin: 0 auto;
     min-height: 100vh;
-    border-right: 1px solid #A38064;
+    border-right: 20px solid #A38064;
     background-color: #F5E9E9;
     position: relative;
     box-sizing: border-box;
+    z-index: 10; /* Garante que esteja na frente */
+    overflow: visible; /* garante que nada seja cortado */
 }
 
 header {
