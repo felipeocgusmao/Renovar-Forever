@@ -119,22 +119,48 @@ section {
     color: #A38064;
 }
 
-#servicos .service-cards {
+/* Estilo para lista numerada de serviços */
+.service-list {
+    list-style-type: none; /* Remove os números padrão da lista */
+    padding: 0;
+    margin: 0;
+}
+
+.service-list li {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-#servicos .card {
-    background-color: #F5E9E9;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-basis: 30%;
+.service-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0AAB8;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
 }
 
-.card-text {
-    color: #E0AAB8;
+.service-content {
+    display: flex;
+    align-items: center;
+}
+
+.service-text h3 {
+    margin: 0;
+    color: #A38064;
+    font-size: 20px;
+}
+
+.service-text p {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #333;
 }
 
 /* Estilo para a seção de feedbacks */
