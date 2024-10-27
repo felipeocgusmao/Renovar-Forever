@@ -39,6 +39,23 @@ body {
     overflow: visible; /* Garante que nada seja cortado */
 }
 
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Bentham&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Estilo para os títulos */
+h1, h2, h3, h4, h5, h6,
+.title {
+  font-family: "Bentham", serif;
+  font-weight: 400;
+}
+
+/* Estilo para os parágrafos */
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
 header {
     background-color: #f5e9e9;
     padding: 1.25rem 0;
