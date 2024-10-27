@@ -22,8 +22,22 @@ body {
     line-height: 1.6;
     background-color: #F5E9E9;
     color: #333;
-    margin: 0;
-    padding: 0;
+}
+
+/* Estilo para títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bentham', serif; /* Fonte para títulos */
+}
+
+/* Estilo para parágrafos */
+p {
+    font-family: 'Montserrat', sans-serif; /* Fonte para textos */
+    font-weight: 400;
+}
+
+/* Estilo para a tag strong */
+strong {
+    color: #E0AAB8; /* Altere para a cor desejada */
 }
 
 /* Container principal com apenas borda direita */
@@ -249,8 +263,9 @@ section {
 }
 
 .processo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: 1.1rem;
-    color: #666;
     line-height: 1.5;
     flex-grow: 1;
 }
