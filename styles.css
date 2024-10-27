@@ -193,8 +193,46 @@ section {
     color: #333;
 }
 
-/* Seção Feedback com efeito blur */
+/* Estilo da seção Processo */
+.processo {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    background-color: #F5E9E9; /* Cor de fundo suave */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.processo h2 {
+    font-size: 2rem;
+    color: #A38064; /* Cor do título */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.processo ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.processo li {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 0.5rem 0;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.processo li::before {
+    content: "•";
+    color: #E0AAB8; /* Cor do bullet point */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Seção Feedback com efeito blur */
 .feedback-section {
     /* Alinhamento centralizado */
     display: flex;
