@@ -436,29 +436,48 @@ section {
 }
 
 /* Estilo para Contato e Catalogo */
-#contact form {
+#contato {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5e9e9;
+}
+
+#contato h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #A38064;
+}
+
+.contato-boxes {
     display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-#contact input, #contato textarea {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#contact button {
-    background-color: #A38064;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    cursor: pointer;
-}
-
-#contact button:hover {
+.contato-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 150px;
     background-color: #E3C5BB;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contato-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contato-box h3 {
+    margin: 0;
+    color: #A38064;
 }
 
 footer {
