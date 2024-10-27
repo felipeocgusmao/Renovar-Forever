@@ -193,43 +193,83 @@ section {
     color: #333;
 }
 
-/* Estilo da seção Processo */
+/* Estilos para a seção processo */
 .processo {
-    padding: 2rem;
+    padding: 4rem 2rem;
     margin: 2rem auto;
-    max-width: 800px;
-    background-color: #F5E9E9; /* Cor de fundo suave */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    background-color: #F5E9E9;
 }
 
 .processo h2 {
-    font-size: 2rem;
-    color: #A38064; /* Cor do título */
+    font-size: 2.5rem;
+    color: #A38064;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    font-family: 'Playfair Display', serif;
 }
 
-.processo ul {
-    list-style-type: none;
+.processo-list {
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.processo li {
-    font-size: 1.1rem;
-    color: #333;
-    padding: 0.5rem 0;
-    line-height: 1.6;
+.processo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
     position: relative;
-    padding-left: 1.5rem;
 }
 
-.processo li::before {
-    content: "•";
-    color: #E0AAB8; /* Cor do bullet point */
-    font-weight: bold;
-    position: absolute;
-    left: 0;
+.processo-arrow {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background-color: #E0AAB8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+.processo-arrow svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.processo-text {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+    .processo {
+        padding: 2rem 1rem;
+    }
+
+    .processo h2 {
+        font-size: 2rem;
+    }
+
+    .processo-arrow {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+
+    .processo-text {
+        font-size: 1rem;
+    }
 }
 
 /* Seção Feedback com efeito blur */
@@ -339,7 +379,7 @@ section {
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.3s ease;
-    height: 200px;
+    height: 300px;
     position: relative;
 }
 
