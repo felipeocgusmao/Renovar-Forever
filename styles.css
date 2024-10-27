@@ -193,6 +193,46 @@ section {
     color: #333;
 }
 
+/* Seção Feedback com efeito blur */
+
+.feedback-section {
+    /* Alinhamento centralizado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    /* Espaço nas laterais para que não toque as bordas do site */
+    margin: 0 auto;
+    max-width: 90%;
+    /* Arredondamento das bordas */
+    border-radius: 20px;
+    /* Fundo com estampa e efeito de blur */
+    background-image: url("assets/COMFUNDO/IMAGENS/05ESTAMPA/ESTAMPA (5).png");
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.feedback-section::before {
+    /* Camada de blur aplicada antes do conteúdo */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5); /* Coloque o efeito de blur na camada superior */
+    backdrop-filter: blur(10px); /* Ajuste o valor de acordo com o efeito desejado */
+    z-index: 0;
+    border-radius: 20px; /* Mantém o arredondamento */
+}
+
+.feedback-content {
+    /* Centralização do conteúdo da seção feedback */
+    position: relative;
+    z-index: 1; /* Para garantir que o conteúdo fique acima do blur */
+}
+
 /* Estilos do Carrossel de Feedbacks */
 .feedback-section {
     background-color: #F5E9E9;
