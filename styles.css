@@ -274,7 +274,7 @@ section {
 /* Estilos do Carrossel de Feedbacks */
 .feedback-section {
     background-color: #F5E9E9;
-    padding: 80px 0;
+    padding: 10px 0;
     position: relative;
     overflow: hidden;
 }
@@ -308,7 +308,7 @@ section {
 .feedback-carousel {
     overflow: hidden;
     position: relative;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .feedback-track {
@@ -339,7 +339,7 @@ section {
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.3s ease;
-    height: 400px;
+    height: 200px;
     position: relative;
 }
 
