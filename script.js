@@ -196,12 +196,3 @@ class PremiumFeedbackCarousel {
 document.addEventListener('DOMContentLoaded', () => {
     new PremiumFeedbackCarousel();
 });
-
-// Scroll Segmentado
-document.querySelectorAll('.scroll-section').forEach((section) => {
-    section.style.height = '100vh';
-  });
-
-  window.addEventListener('scroll', () => {
-    // Adicione lógica personalizada, se necessário
-  });
