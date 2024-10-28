@@ -196,3 +196,20 @@ class PremiumFeedbackCarousel {
 document.addEventListener('DOMContentLoaded', () => {
     new PremiumFeedbackCarousel();
 });
+
+// Estilo Scroll Animado, Segmentado e Parallax
+document.addEventListener('DOMContentLoaded', () => {
+    // Ajustar a altura de cada seção
+    document.querySelectorAll('.scroll-section').forEach((section) => {
+        section.style.height = '100vh';
+    });
+
+    // Implementação simples para o efeito de parallax
+    window.addEventListener('scroll', () => {
+        let scrollPosition = window.scrollY;
+        document.querySelectorAll('.parallax').forEach((parallax) => {
+            let speed = 0.5;
+            parallax.style.transform = `translateY(${scrollPosition * speed}px)`;
+        });
+    });
+});
