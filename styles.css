@@ -17,6 +17,14 @@ html {
     box-sizing: border-box;
 }
 
+/* Ajusta a altura das seções */
+.section {
+    min-height: 100vh; /* Cada seção ocupa a altura total da janela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Estilo Corpo */
 body {
     font-family: Arial, sans-serif;
