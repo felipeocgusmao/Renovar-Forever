@@ -20,7 +20,7 @@ html {
 /* Estilo Corpo */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    scroll-behavior: smooth;
     background-color: #F5E9E9;
     color: #333;
 }
@@ -94,6 +94,7 @@ header .logo h1 {
 #about img {
     border-radius: 0.625rem;
 }
+
 
 /* Estilo atualizado para a seção hero */
 #hero {
