@@ -197,34 +197,25 @@ document.addEventListener('DOMContentLoaded', () => {
     new PremiumFeedbackCarousel();
 });
 
-// Estilo Scroll Segmentado
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.section'); // Seleciona todas as seções
-    let currentSection = 0; // Índice da seção atual
+// Estilo Scroll Segmentado.('DOMContentLoaded', () => {    const sections = document.querySelectorAll('.section'); // Seleciona todas as seções    let currentSection = 0; // Índice da seção atual
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
 
-    // Função para rolar suavemente até a seção especificada
-    function scrollToSection(index) {
-        sections[index].scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+    const options = {
+        threshold: 0.1 // Garante que a seção fique visível quando 10% dela estiver na tela
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible");
+            }
         });
-    }
+    }, options);
 
-    // Event listener para detectar o scroll
-    window.addEventListener('wheel', (event) => {
-        if (event.deltaY > 0) {
-            // Scroll para baixo
-            if (currentSection < sections.length - 1) {
-                currentSection++;
-                scrollToSection(currentSection);
-            }
-        } else {
-            // Scroll para cima
-            if (currentSection > 0) {
-                currentSection--;
-                scrollToSection(currentSection);
-            }
-        }
+    sections.forEach((section) => {
+        observer.observe(section);
     });
 });
-
