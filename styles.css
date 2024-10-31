@@ -25,6 +25,16 @@ html {
     align-items: center;
 }
 
+/* Estilos básicos de transição */
+.section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.section.visible {
+    opacity: 1;
+}
+
 /* Estilo Corpo */
 body {
     font-family: Arial, sans-serif;
