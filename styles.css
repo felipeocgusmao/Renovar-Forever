@@ -1,7 +1,7 @@
 /* Media query para dispositivos móveis */
 @media (max-width: 75rem) {
     .main-container {
-        border-right: 0.0625rem solid #A38064; /* Garanta que a borda esteja presente mesmo em telas menores */
+        border-right: 0.0625rem solid #A38064;
     }
 }
 
@@ -17,6 +17,14 @@ html {
     box-sizing: border-box;
 }
 
+/* Ajusta a altura das seções */
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Estilo Corpo */
 body {
     font-family: Arial, sans-serif;
@@ -27,18 +35,18 @@ body {
 
 /* Estilo para títulos */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bentham', serif; /* Fonte para títulos */
+    font-family: 'Bentham', serif;
 }
 
 /* Estilo para parágrafos */
 p {
-    font-family: 'Montserrat', sans-serif; /* Fonte para textos */
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
 
 /* Estilo para a tag strong */
 strong {
-    color: #E0AAB8; /* Altere para a cor desejada */
+    color: #E0AAB8;
 }
 
 /* Container principal com apenas borda direita */
@@ -50,8 +58,8 @@ strong {
     background-color: #F5E9E9;
     position: relative;
     box-sizing: border-box;
-    z-index: 10; /* Garante que esteja na frente */
-    overflow: visible; /* Garante que nada seja cortado */
+    z-index: 10;
+    overflow: visible;
 }
 
 header {
@@ -98,15 +106,15 @@ header .logo h1 {
 
 /* Estilo atualizado para a seção hero */
 #hero {
-    background-color: #E0AAB8; /* Mantendo a cor de fundo */
-    height: 70vh; /* Aumenta a altura da seção */
+    background-color: #E0AAB8;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
-    padding: 2.5rem 1.25rem; /* Adiciona espaçamento interno */
-    overflow: hidden; /* Para gerenciar o conteúdo */
+    padding: 2.5rem 1.25rem;
+    overflow: hidden;
 }
 
 #hero::before {
@@ -116,19 +124,19 @@ header .logo h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/img-background.png'); /* Exemplo de imagem de fundo */
+    background-image: url('assets/img-background.png');
     background-size: cover;
     background-position: center;
-    opacity: 0.3; /* Imagem de fundo com opacidade para ser sutil */
-    z-index: -1; /* Para que o conteúdo fique por cima */
+    opacity: 0.3;
+    z-index: -1;
 }
 
 .hero-text {
-    max-width: 50rem; /* Limita a largura do texto para uma leitura mais confortável */
+    max-width: 50rem;
     color: #F5E9E9;
     padding: 1.25rem;
-    text-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.5); /* Adiciona uma sombra leve no texto */
-    animation: fadeIn 1.5s ease-in-out; /* Animação suave de entrada */
+    text-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -138,9 +146,9 @@ header .logo h1 {
 
 #hero h2 {
     font-size: 3rem;
-    line-height: 1.2; /* Melhor espaçamento entre as linhas */
+    line-height: 1.2;
     margin-bottom: 1.2rem;
-    font-family: 'Playfair Display', serif; /* Fonte elegante */
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
 }
 
@@ -148,7 +156,7 @@ header .logo h1 {
     font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: 2.5rem;
-    font-family: 'Open Sans', sans-serif; /* Uma fonte limpa e moderna */
+    font-family: 'Open Sans', sans-serif;
 }
 
 section {
@@ -170,7 +178,7 @@ section {
 .service-list {
     display: flex;
     flex-direction: column;
-    list-style-type: none; /* Remove os números padrão da lista */
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
@@ -193,12 +201,12 @@ section {
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    margin-right: 1.25rem; /* Espaço entre o número e o texto */
-    flex-shrink: 0; /* Impede que o número seja redimensionado */
+    margin-right: 1.25rem;
+    flex-shrink: 0;
 }
 
 .service-content {
-    flex-grow: 1; /* Faz o conteúdo ocupar o máximo possível */
+    flex-grow: 1;
 }
 
 .service-content h3 {
@@ -320,16 +328,16 @@ section {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.5); /* Coloque o efeito de blur na camada superior */
-    backdrop-filter: blur(0.3125rem); /* Ajuste o valor de acordo com o efeito desejado */
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(0.3125rem);
     z-index: 0;
-    border-radius: 1.25rem; /* Mantém o arredondamento */
+    border-radius: 1.25rem;
 }
 
 .feedback-content {
     /* Centralização do conteúdo da seção feedback */
     position: relative;
-    z-index: 1; /* Para garantir que o conteúdo fique acima do blur */
+    z-index: 1;
 }
 
 /* Estilos do Carrossel de Feedbacks */
@@ -396,7 +404,7 @@ section {
 }
 
 .feedback-card {
-    background: transparent; /* Alterado de #fff para transpatenre */
+    background: transparent;
     border-radius: 1rem;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -426,8 +434,8 @@ section {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: transparent; /* Alterado de #fff para transparente */
-    border: 0.125rem solid #A38064; /* Alterado borda para manter visibilidade */
+    background: transparent;
+    border: 0.125rem solid #A38064;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -438,7 +446,7 @@ section {
 }
 
 .nav-button:hover {
-    background: rgba(163, 128, 100, 0.1); /* Fundi semi-transparente no hover  */
+    background: rgba(163, 128, 100, 0.1);
     color: #A38064;
 }
 

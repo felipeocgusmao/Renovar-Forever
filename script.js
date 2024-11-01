@@ -196,3 +196,34 @@ class PremiumFeedbackCarousel {
 document.addEventListener('DOMContentLoaded', () => {
     new PremiumFeedbackCarousel();
 });
+
+// Estilo Scroll Segmentado
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.section'); // Seleciona todas as seções
+    let currentSection = 0; // Índice da seção atual
+
+    // Função para rolar suavemente até a seção especificada
+    function scrollToSection(index) {
+        sections[index].scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
+    // Event listener para detectar o scroll
+    window.addEventListener('wheel', (event) => {
+        if (event.deltaY > 0) {
+            // Scroll para baixo
+            if (currentSection < sections.length - 1) {
+                currentSection++;
+                scrollToSection(currentSection);
+            }
+        } else {
+            // Scroll para cima
+            if (currentSection > 0) {
+                currentSection--;
+                scrollToSection(currentSection);
+            }
+        }
+    });
+});
