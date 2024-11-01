@@ -196,26 +196,3 @@ class PremiumFeedbackCarousel {
 document.addEventListener('DOMContentLoaded', () => {
     new PremiumFeedbackCarousel();
 });
-
-// Estilo Scroll Segmentado.('DOMContentLoaded', () => {    const sections = document.querySelectorAll('.section'); // Seleciona todas as seções    let currentSection = 0; // Índice da seção atual
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-
-    const options = {
-        threshold: 0.1 // Garante que a seção fique visível quando 10% dela estiver na tela
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            } else {
-                entry.target.classList.remove("visible");
-            }
-        });
-    }, options);
-
-    sections.forEach((section) => {
-        observer.observe(section);
-    });
-});
