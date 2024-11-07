@@ -520,8 +520,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 12.5rem;
-    height: 9.375rem;
+    width: 200px;
+    height: 100px;
     background-color: #E3C5BB;
     color: #fff;
     text-decoration: none;
