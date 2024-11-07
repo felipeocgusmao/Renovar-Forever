@@ -196,3 +196,203 @@ class PremiumFeedbackCarousel {
 document.addEventListener('DOMContentLoaded', () => {
     new PremiumFeedbackCarousel();
 });
+
+// Estilo em Scroll Segmentado
+class ScrollSnapManager {
+    constructor() {
+        this.sections = [];
+        this.currentSectionIndex = 0;
+        this.isScrolling = false;
+        this.touchStartY = 0;
+        this.init();
+    }
+
+    init() {
+        // Configurar container principal
+        const mainContainer = document.querySelector('.main-container');
+        mainContainer.style.height = '100vh';
+        mainContainer.style.overflow = 'hidden';
+
+        // Criar wrapper para as seções
+        const wrapper = document.createElement('div');
+        wrapper.className = 'sections-wrapper';
+
+        // Mover todas as seções para dentro do wrapper
+        const sections = Array.from(mainContainer.querySelectorAll('section, #hero'));
+        sections.forEach(section => {
+            section.style.height = '100vh';
+            section.style.minHeight = '100vh';
+            wrapper.appendChild(section);
+        });
+
+        mainContainer.appendChild(wrapper);
+
+        // Adicionar estilos necessários
+        const style = document.createElement('style');
+        style.textContent = `
+            .sections-wrapper {
+                height: 100vh;
+                overflow-y: scroll;
+                scroll-snap-type: y mandatory;
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* IE/Edge */
+            }
+
+            .sections-wrapper::-webkit-scrollbar {
+                display: none; /* Chrome/Safari/Opera */
+            }
+
+            .sections-wrapper > section,
+            .sections-wrapper > #hero {
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+            }
+
+            .scroll-indicator {
+                position: fixed;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                z-index: 1000;
+            }
+
+            .scroll-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #E0AAB8;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                opacity: 0.5;
+            }
+
+            .scroll-dot.active {
+                opacity: 1;
+                transform: scale(1.3);
+                background-color: #A38064;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Criar indicadores de scroll
+        this.createScrollIndicators(sections);
+
+        // Configurar eventos
+        this.wrapper = wrapper;
+        this.sections = sections;
+
+        this.setupEventListeners();
+    }
+
+    createScrollIndicators(sections) {
+        const indicator = document.createElement('div');
+        indicator.className = 'scroll-indicator';
+
+        sections.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'scroll-dot';
+            if (index === 0) dot.classList.add('active');
+
+            dot.addEventListener('click', () => this.scrollToSection(index));
+            indicator.appendChild(dot);
+        });
+
+        document.body.appendChild(indicator);
+    }
+
+    setupEventListeners() {
+        // Evento de scroll
+        this.wrapper.addEventListener('scroll', () => {
+            if (!this.isScrolling) {
+                this.handleScroll();
+            }
+        });
+
+        // Eventos de teclado
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                this.scrollToSection(this.currentSectionIndex - 1);
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                this.scrollToSection(this.currentSectionIndex + 1);
+            }
+        });
+
+        // Eventos de roda do mouse
+        this.wrapper.addEventListener('wheel', (e) => {
+            e.preventDefault();
+
+            if (!this.isScrolling) {
+                if (e.deltaY > 0) {
+                    this.scrollToSection(this.currentSectionIndex + 1);
+                } else {
+                    this.scrollToSection(this.currentSectionIndex - 1);
+                }
+            }
+        }, { passive: false });
+
+        // Eventos de touch
+        this.wrapper.addEventListener('touchstart', (e) => {
+            this.touchStartY = e.touches[0].clientY;
+        });
+
+        this.wrapper.addEventListener('touchmove', (e) => {
+            const touchEndY = e.touches[0].clientY;
+            const diff = this.touchStartY - touchEndY;
+
+            if (Math.abs(diff) > 50) { // Threshold para swipe
+                if (diff > 0) {
+                    this.scrollToSection(this.currentSectionIndex + 1);
+                } else {
+                    this.scrollToSection(this.currentSectionIndex - 1);
+                }
+                this.touchStartY = touchEndY;
+            }
+        });
+    }
+
+    handleScroll() {
+        const scrollPosition = this.wrapper.scrollTop;
+        const windowHeight = window.innerHeight;
+
+        this.currentSectionIndex = Math.round(scrollPosition / windowHeight);
+
+        // Atualizar indicadores
+        const dots = document.querySelectorAll('.scroll-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === this.currentSectionIndex);
+        });
+    }
+
+    scrollToSection(index) {
+        if (index < 0 || index >= this.sections.length || this.isScrolling) return;
+
+        this.isScrolling = true;
+        this.currentSectionIndex = index;
+
+        this.wrapper.scrollTo({
+            top: index * window.innerHeight,
+            behavior: 'smooth'
+        });
+
+        // Atualizar indicadores
+        const dots = document.querySelectorAll('.scroll-dot');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+
+        // Reset do flag de scrolling após a animação
+        setTimeout(() => {
+            this.isScrolling = false;
+        }, 1000);
+    }
+}
+
+// Inicializar quando o DOM estiver pronto
+document.addEventListener('DOMContentLoaded', () => {
+    new ScrollSnapManager();
+});
