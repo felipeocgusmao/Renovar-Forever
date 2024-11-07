@@ -1,7 +1,7 @@
 /* Media query para dispositivos móveis */
 @media (max-width: 75rem) {
     .main-container {
-        border-right: 0.0625rem solid #A38064;
+        border-left: 0.0625rem solid #A38064;
     }
 }
 
@@ -47,7 +47,7 @@ strong {
     max-width: 120rem;
     margin: 0 auto;
     min-height: 100vh;
-    border-right: 1.25rem solid #A38064;
+    border-left: 1.25rem solid #A38064;
     background-color: #F5E9E9;
     position: relative;
     box-sizing: border-box;
@@ -225,7 +225,7 @@ section {
 .processo h2 {
     font-size: 2.5rem;
     color: #A38064;
-    text-align: center;
+    text-align: left;
     margin-bottom: 3rem;
     font-family: 'Playfair Display', serif;
 }
