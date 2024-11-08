@@ -99,7 +99,7 @@ header .logo h1 {
 /* Estilo atualizado para a seção hero */
 #hero {
     background-color: #E0AAB8;
-    height: 70vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
