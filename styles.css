@@ -1,13 +1,8 @@
 /* Media query para dispositivos móveis */
-@media (max-width: 75rem) {
+@media (max-width: 1200px) {
     .main-container {
-        border-left: 0.0625rem solid #A38064;
+        border-right: 1px solid #A38064; 
     }
-}
-
-/* Define o tamanho base da fonte para cálculos rem */
-html {
-    font-size: 16px;
 }
 
 /* Reseta o estilo padrão */
@@ -15,6 +10,11 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Define o tamanho base da fonte */
+html {
+    font-size: 16px;
 }
 
 /* Estilo Corpo */
@@ -27,42 +27,42 @@ body {
 
 /* Estilo para títulos */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bentham', serif;
+    font-family: 'Bentham', serif; 
 }
 
 /* Estilo para parágrafos */
 p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; 
     font-weight: 400;
 }
 
 /* Estilo para a tag strong */
 strong {
-    color: #E0AAB8;
+    color: #E0AAB8; 
 }
 
 /* Container principal com apenas borda direita */
 .main-container {
-    max-width: 120rem;
+    max-width: 1920px;
     margin: 0 auto;
     min-height: 100vh;
-    border-left: 1.25rem solid #A38064;
+    border-right: 20px solid #A38064;
     background-color: #F5E9E9;
     position: relative;
     box-sizing: border-box;
-    z-index: 10;
-    overflow: visible;
+    z-index: 10; 
+    overflow: visible; 
 }
 
 header {
     background-color: #f5e9e9;
-    padding: 1.25rem 0;
+    padding: 20px 0;
     text-align: center;
 }
 
 header .logo h1 {
     color: #F5E9E9;
-    font-size: 1.875rem;
+    font-size: 30px;
     margin: 0;
 }
 
@@ -83,30 +83,29 @@ header .logo h1 {
 
 #about .col-left {
     width: 70%;
-    padding: 1.25rem;
+    padding: 20px;
 }
 
 #about .col-right {
     width: 30%;
-    padding: 1.25rem;
+    padding: 20px;
 }
 
 #about img {
-    border-radius: 0.625rem;
+    border-radius: 10px;
 }
-
 
 /* Estilo atualizado para a seção hero */
 #hero {
-    background-color: #E0AAB8;
-    height: 50vh;
+    background-color: #E0AAB8; 
+    height: 70vh; 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
-    padding: 2.5rem 1.25rem;
-    overflow: hidden;
+    padding: 40px 20px; 
+    overflow: hidden; 
 }
 
 #hero::before {
@@ -116,43 +115,43 @@ header .logo h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/img-background.png');
+    background-image: url('assets/img-background.png'); 
     background-size: cover;
     background-position: center;
-    opacity: 0.3;
-    z-index: -1;
+    opacity: 0.3; 
+    z-index: -1; 
 }
 
 .hero-text {
-    max-width: 50rem;
+    max-width: 800px; 
     color: #F5E9E9;
-    padding: 1.25rem;
-    text-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1.5s ease-in-out;
+    padding: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    animation: fadeIn 1.5s ease-in-out; 
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(1.25rem); }
+    0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
 #hero h2 {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 1.2rem;
-    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    line-height: 19.2px; 
+    margin-bottom: 24px;
+    font-family: 'Playfair Display', serif; 
     font-weight: 700;
 }
 
 #hero p {
-    font-size: 1.25rem;
+    font-size: 48px;
     line-height: 1.5;
-    margin-bottom: 2.5rem;
-    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+    font-family: 'Open Sans', sans-serif; 
 }
 
 section {
-    padding: 3.75rem 1.25rem;
+    padding: 60px 20px;
 }
 
 .container {
@@ -161,8 +160,8 @@ section {
 }
 
 #about h2, #servicos h2, #feedback h2, #mission h2, #contact h2 {
-    font-size: 2.25rem;
-    margin-bottom: 1.25rem;
+    font-size:36px;
+    margin-bottom: 20px;
     color: #A38064;
 }
 
@@ -170,7 +169,7 @@ section {
 .service-list {
     display: flex;
     flex-direction: column;
-    list-style-type: none;
+    list-style-type: none; 
     padding: 0;
     margin: 0;
 }
@@ -178,7 +177,7 @@ section {
 .service-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 1.25rem;
+    margin: bottom 20px;
     position: relative;
 }
 
@@ -188,44 +187,44 @@ section {
     align-items: center;
     background-color: #E0AAB8;
     color: white;
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-right: 1.25rem;
-    flex-shrink: 0;
+    width:40px;
+    height: 40px;
+    margin-right: 20px; 
+    flex-shrink: 0; 
 }
 
 .service-content {
-    flex-grow: 1;
+    flex-grow: 1; 
 }
 
 .service-content h3 {
     margin: 0;
     color: #A38064;
-    font-size: 1.25rem;
+    font-size: 20px;
 }
 
 .service-content p {
-    margin-top: 0.3125rem;
-    font-size: 1rem;
+    margin-top: 5px;
+    font-size: 16px;
     color: #333;
 }
 
 /* Estilos para a seção processo */
 .processo {
-    padding: 4rem 2rem;
-    margin: 2rem auto;
-    max-width: 62.5rem;
+    padding: 64px 32px;
+    margin: 32px auto;
+    max-width: 1024px;
     background-color: #F5E9E9;
 }
 
 .processo h2 {
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #A38064;
-    text-align: left;
-    margin-bottom: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
     font-family: 'Playfair Display', serif;
 }
 
@@ -238,28 +237,28 @@ section {
 .processo-item {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
     position: relative;
 }
 
 .processo-arrow {
-    width: 3.125rem;
-    height: 3.125rem;
-    min-width: 3.125rem;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
     background-color: #E0AAB8;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1.5rem;
+    margin-right: 24px;
 }
 
 .processo-arrow svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 24px;
+    height: 24px;
     fill: none;
     stroke: #fff;
-    stroke-width: 0.125rem;
+    stroke-width: 2px;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -267,29 +266,29 @@ section {
 .processo-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 17.6px;
     line-height: 1.5;
     flex-grow: 1;
 }
 
 /* Estilo para dispositivos móveis */
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
     .processo {
-        padding: 2rem 1rem;
+        padding: 32px 16px;
     }
 
     .processo h2 {
-        font-size: 2rem;
+        font-size: 32px;
     }
 
     .processo-arrow {
-        width: 2.5rem;
-        height: 2.5rem;
-        min-width: 2.5rem;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
     }
 
     .processo-text {
-        font-size: 1rem;
+        font-size: 16px;
     }
 }
 
@@ -299,12 +298,12 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2.5rem;
+    padding: 40px;
     /* Espaço nas laterais para que não toque as bordas do site */
     margin: 0 auto;
     max-width: 90%;
     /* Arredondamento das bordas */
-    border-radius: 1.25rem;
+    border-radius: 20px;
     /* Fundo com estampa e efeito de blur */
     background-image: url("assets/COMFUNDO/IMAGENS/05ESTAMPA/ESTAMPA (5).png");
     background-size: cover;
@@ -320,22 +319,22 @@ section {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(0.3125rem);
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(5px); 
     z-index: 0;
-    border-radius: 1.25rem;
+    border-radius: 20px; 
 }
 
 .feedback-content {
     /* Centralização do conteúdo da seção feedback */
     position: relative;
-    z-index: 1;
+    z-index: 1; 
 }
 
 /* Estilos do Carrossel de Feedbacks */
 .feedback-section {
     background-color: #F5E9E9;
-    padding: 0.625rem 0;
+    padding: 10px 0;
     position: relative;
     overflow: hidden;
 }
@@ -344,43 +343,43 @@ section {
     text-align: center;
     color: #A38064;
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 3.125rem;
+    font-size: 40px;
+    margin-bottom: 40px;
     position: relative;
 }
 
 .feedback-section h2::after {
     content: '';
     display: block;
-    width: 3.75rem;
-    height: 0.1875rem;
+    width: 60px;
+    height: 5px;
     background: #E0AAB8;
-    margin: 1.25rem auto 0;
-    border-radius: 0.125rem;
+    margin: 20px auto 0;
+    border-radius: 5px;
 }
 
 .feedback-container {
     position: relative;
-    max-width: 75rem;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 3.75rem;
+    padding: 0 60px;
 }
 
 .feedback-carousel {
     overflow: hidden;
     position: relative;
-    padding: 0.625rem 0;
+    padding: 10px 0;
 }
 
 .feedback-track {
     display: flex;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    gap: 1.875rem;
-    padding: 0.625rem 0;
+    gap: 30px;
+    padding: 10px 0;
 }
 
 .feedback-slide {
-    flex: 0 0 calc(33.333% - 1.25rem);
+    flex: 0 0 calc(33.333% - 20px);
     opacity: 0.7;
     transform: scale(0.95);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -396,16 +395,16 @@ section {
 }
 
 .feedback-card {
-    background: transparent;
-    border-radius: 1rem;
+    background: transparent; 
+    border-radius: 16   px;
     overflow: hidden;
     transition: all 0.3s ease;
-    height: 18.75rem;
+    height: 300px;
     position: relative;
 }
 
 .feedback-card:hover {
-    transform: translateY(-0.3125rem);
+    transform: translateY(-20px);
 }
 
 .feedback-image {
@@ -423,11 +422,11 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 3rem;
-    height: 3rem;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: transparent;
-    border: 0.125rem solid #A38064;
+    background: transparent; 
+    border: 2px solid #A38064;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -453,13 +452,13 @@ section {
 .feedback-indicators {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
-    margin-top: 2.5rem;
+    gap: 8px;
+    margin-top: 40px;
 }
 
 .indicator {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #E0AAB8;
     opacity: 0.3;
@@ -469,48 +468,48 @@ section {
 
 .indicator.active {
     opacity: 1;
-    width: 1.5rem;
-    border-radius: 0.25rem;
+    width: 24px;
+    border-radius: 4px;
     background: #A38064;
 }
 
-@media (max-width: 64rem) {
+@media (max-width: 1024px) {
     .feedback-slide {
-        flex: 0 0 calc(50% - 0.9375rem);
+        flex: 0 0 calc(50% - 16px);
     }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
     .feedback-slide {
         flex: 0 0 100%;
     }
 
     .feedback-container {
-        padding: 0 2.5rem;
+        padding: 0 40px;
     }
 
     .nav-button {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 40px;
+        height: 40px;
     }
 }
 
 /* Estilo para Contato e Catalogo */
 #contato {
-    padding: 3.125rem 1.25rem;
+    padding: 60px 20px;
     text-align: center;
     background-color: #f5e9e9;
 }
 
 #contato h2 {
-    margin-bottom: 1.875rem;
-    font-size: 2rem;
+    margin-bottom: 30px;
+    font-size: 40px;
     color: #A38064;
 }
 
 .contato-boxes {
     display: flex;
-    gap: 1.25rem;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -520,19 +519,19 @@ section {
     align-items: center;
     justify-content: center;
     width: 200px;
-    height: 100px;
+    height: 150px;
     background-color: #E3C5BB;
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 0.625rem;
-    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contato-box:hover {
-    transform: translateY(-0.3125rem);
-    box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .contato-box h3 {
@@ -544,6 +543,6 @@ footer {
     background-color: #A38064;
     color: #F5E9E9;
     text-align: center;
-    padding: 0.625rem 0;
-    margin-top: 1.25rem;
+    padding: 20px 0;
+    margin-top: 40px;
 }
