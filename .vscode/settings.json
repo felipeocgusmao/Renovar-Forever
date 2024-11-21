@@ -230,7 +230,7 @@
   ],
   "editor.fontSize": 12,
   "workbench.activityBar.orientation": "horizontal",
-  "workbench.colorTheme": "Omni Owl (Minimal Italics)",
+  "workbench.colorTheme": "Default Dark Modern",
   "workbench.sideBar.location": "left",
   "workbench.editor.openPositioning": "right"
 }
