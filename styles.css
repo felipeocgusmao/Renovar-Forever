@@ -75,7 +75,7 @@ header .logo h1 {
 
 #about .row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -87,7 +87,6 @@ header .logo h1 {
 }
 
 #about .col-right {
-    width: 30%;
     padding: 20px;
 }
 
