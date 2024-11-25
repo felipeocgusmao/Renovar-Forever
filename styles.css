@@ -5,22 +5,6 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
-    /* CSS rules for mobile devices */
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    /* CSS rules for tablet devices */
-}
-
-@media only screen and (min-width: 1025px) and (max-width:1199px) {
-    /* CSS rules for desktop devices */
-}
-
-@media only screen and (min-width:1200px) {
-    /* CSS rules for desktop devices */
-}
-
 /* Reseta o estilo padrão */
 * {
     margin: 0;
@@ -221,7 +205,7 @@ section {
 }
 
 .service-content p {
-    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 16px;
     color: #333;
 }
