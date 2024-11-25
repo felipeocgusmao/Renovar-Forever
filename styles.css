@@ -80,6 +80,7 @@ header .logo h1 {
 }
 
 #about .col-right {
+    width: 30px;
     padding: 20px;
 }
 
