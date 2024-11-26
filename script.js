@@ -30,8 +30,8 @@ function showSlides(n) {
 
 document.getElementById('whatsappBtn').addEventListener('click', function() {
     // Replace this number with your actual WhatsApp number
-    const phoneNumber = '5511999999999';
-    const message = 'Olá! Gostaria de saber mais sobre seus produtos.';
+    const phoneNumber = 'https://wa.me/message/OVCOGVWSMI2FG1';
+    const message = 'Olá! Gostaria de fazer um orçamento com você.';
 
     // Create WhatsApp URL
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
