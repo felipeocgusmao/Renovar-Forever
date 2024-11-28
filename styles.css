@@ -45,7 +45,7 @@
     max-width: 1920px;
     margin: 0 auto;
     min-height: 100vh;
-    border-left: 40px solid #a38064;
+    border-left: 10px solid #a38064;
     background-color: #f5e9e9;
     position: relative;
     box-sizing: border-box;
