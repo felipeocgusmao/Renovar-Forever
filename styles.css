@@ -96,7 +96,7 @@ header .logo h1 {
 }
 
 #about .about-image {
-  max-width: 400px;
+  max-width: 300px;
   justify-self: end;
   height: 100%;
   object-fit: cover;
@@ -111,7 +111,7 @@ header .logo h1 {
 @media (max-width: 1280px) {
   #about .row {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 600px;
+    grid-template-rows: 0.25fr 500px;
   }
 
   #about .about-image {
@@ -211,12 +211,15 @@ section {
   color: #E0AAB8;
 }
 
-/* Estilo para a lista de serviços */ 
+/* Estilo para a lista de serviços */
+#servicos {
+  padding: 60px;
+}
+
 .service-list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  padding: 50px;
   margin: 0;
 }
 
